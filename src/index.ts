@@ -14,8 +14,8 @@ export default async function user_regist(user: string, password: string, info: 
 	if (!password) {
 		throw new Error('password could not be empty.');
 	}
-	const [ret] = await an14<{ cnt: string }>(db, [`select count(id) as cnt from user_auths where identity_type='usercode' and identifier='${user}'`, []]);
-	if (ret[0].cnt !== '0') {
+	const [ret] = await an14<{ cnt: bigint }>(db, [`select count(id) as cnt from user_auths where identity_type='usercode' and identifier='${user}'`, []]);
+	if (ret[0].cnt !== 0n) {
 		throw new Error('user exists.');
 	}
 	const userid = v4();
