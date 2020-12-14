@@ -12,3 +12,4 @@ mm.json
 .yarnrc
 *.sh
 *.log
+*.yml

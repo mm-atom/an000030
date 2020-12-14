@@ -10,6 +10,7 @@ test('用户编号注册', async (t) => {
 		email: 'taoqiufeng@ifeidao.com',
 		phone: '18937139411'
 	};
-	await a(user, password, info);
+	await a('user', user, password, info);
+	await a('phone', '18937139411', password, info);
 	t.pass();
 });

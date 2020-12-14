@@ -4,7 +4,7 @@
 	"description": "用户注册",
 	"scripts": {
 		"test": "tsc && ava ./tests/*.js",
-		"watch": "tsc -w & ava --watch ./tests/*.js",
+		"dev": "tsc -w & ava --watch ./tests/*.js",
 		"clean": "del-cli ./dist/",
 		"lint": "eslint ./src/**/*.ts",
 		"compile": "tsc",
@@ -44,16 +44,19 @@
 		"uuid": "7.0.3"
 	},
 	"peerDependencies": {
-		"@mmstudio/an000014": "*"
+		"@mmstudio/an000036": "*",
+		"@mmstudio/config": "*",
+		"@mmstudio/global": "*"
 	},
 	"devDependencies": {
-		"@mmstudio/an000014": "latest",
+		"@mmstudio/an000036": "latest",
 		"@mmstudio/config": "latest",
 		"@mmstudio/global": "latest",
 		"@types/minio": "latest",
 		"@types/uuid": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
+		"anylogger": "latest",
 		"ava": "latest",
 		"del-cli": "latest",
 		"eslint": "latest",
